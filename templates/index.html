@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../static/css/2.css" rel="stylesheet" type="text/css">
+    <title>Secret Space</title>
+    <script>function IsPC() {    
+        var userAgentInfo = navigator.userAgent;    
+        var Agents = ["Android", "iPhone","ymbianOS","Windows Phone", "iPad", "iPod"];   
+        var flag = false;   
+        for (var v = 0; v < Agents.length; v++) {       
+          if (userAgentInfo.indexOf(Agents[v]) > 0) {            
+            flag = true;            
+            break;       
+          }  
+        }   
+        return flag;
+      }
+    </script>
+</head>
+<body>
+    {% if username %}
+    <script>
+        document.cookie="username={{username}}";
+    </script>
+    {% endif %}
+    <h1 class="th">Secret Space</h1>
+    <div class="box test-1" id="f">
+        <h2 id="hi" class="hm1">Hi, 
+            <script src="../static/js/check.js"></script>
+            !</h2>
+        <h3 id="w" class="hm2">Welcome to Secret Space! </h3>
+        <hr>
+        
+    </div>
+</body>
+</html>
